@@ -1,0 +1,19 @@
+#goes here /etc/systemd/system/remote_start.service
+
+[Unit]
+Description=Remote Start Service
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/local/bin/remote_start/remote_start_service.py
+WorkingDirectory=/usr/local/bin/remote_start
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=root
+Group=root
+
+ExecStopPost=/usr/local/bin/remote_start/on_stop_script.py
+
+[Install]
+WantedBy=multi-user.target
