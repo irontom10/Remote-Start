@@ -1,0 +1,5 @@
+# Allow www-data to start the remote_start.service
+www-data ALL=NOPASSWD: /bin/systemctl start remote_start.service
+
+# Allow www-data to stop the remote_start.service
+www-data ALL=NOPASSWD: /bin/systemctl stop remote_start.service
