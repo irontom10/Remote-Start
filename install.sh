@@ -20,4 +20,5 @@ sudo chmod 440 /etc/sudoers.d/www-data
 
 sudo rm -rf /usr/local/bin/remote_start/
 sudo mkdir /usr/local/bin/remote_start/
-sudo cp ./files/bin/* /usr/local/bin/remote_start/
+sudo cp -R ./files/bin/ /usr/local/bin/remote_start/
+sudo chmod +x /usr/local/bin/*
