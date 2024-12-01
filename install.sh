@@ -11,11 +11,13 @@ sudo cp -r ./files/website/* /var/www/html
 sudo chmod -R 777 /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/
 
+sudo rm /etc/systemd/system/remote_start.service
 sudo cp ./files/systemctl/remote_start.service /etc/systemd/system/remote_start.service
 sudo chmod 644 /etc/systemd/system/remote_start.service
 sudo systemctl daemon-reload
 sudo cp ./files/www-data /etc/sudoers.d/www-data
 sudo chmod 440 /etc/sudoers.d/www-data
 
+sudo rm -rf /usr/local/bin/remote_start/
 sudo mkdir /usr/local/bin/remote_start/
 sudo cp ./files/bin/* /usr/local/bin/remote_start/
