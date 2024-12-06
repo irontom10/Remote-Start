@@ -21,4 +21,5 @@ sudo chmod 440 /etc/sudoers.d/www-data
 sudo rm -rf /usr/local/bin/remote_start/
 sudo mkdir /usr/local/bin/remote_start/
 sudo cp -R ./files/remote_start/ /usr/local/bin/
-sudo chmod +x /usr/local/bin/*
+sudo chmod +x /usr/local/bin/remote_start/*
+sudo chmod 777 /var/log/remote_start.log
